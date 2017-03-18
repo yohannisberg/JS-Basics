@@ -6,6 +6,15 @@ var name = 'Tyler';
 
   //Code Here
 
+  function isTyler(name){
+    if(name==="Tyler"){
+      return true;
+    }
+    else{
+      return false;
+    }
+  }
+
 //////////////////PROBLEM 2////////////////////
 
 
@@ -13,7 +22,10 @@ var name = 'Tyler';
 
 
   //Code Here
-
+function getName(){
+  var name = prompt();
+return name;
+}
 
 //////////////////PROBLEM 3////////////////////
 
@@ -24,6 +36,14 @@ var name = 'Tyler';
 
   //Code Here
 
+  function welcome (){
+
+  var test= getName();
+
+    alert("Welcome, " + test);
+  }
+
+  welcome()
 
 //////////////////PROBLEM 4////////////////////
 
@@ -33,7 +53,7 @@ var name = 'Tyler';
 //What is the difference between arguments and parameters?
 
   //Answer Here
-
+//Arguments are passed into a function, and turn into the parameters
 
 //////////////////PROBLEM 5////////////////////
 
@@ -43,7 +63,7 @@ var name = 'Tyler';
 
 
   //Answer Here
-
+//The falsy values in JavaScript are null, undefined, NaN, 0, "", and false.  To check, if you can simply put it into an if statement, and return anything.  If anything is returned, it's true.
 
 
 //////////////////PROBLEM 6////////////////////
@@ -53,15 +73,21 @@ var name = 'Tyler';
 //Create a function called myName that returns your name
 
   //Code Here
-  
+function myName(){
+  return "John";
+}
 
 
 //Now save the function definition of myName into a new variable called newMyName
 
   //Code Here
 
-//Now alert the result of invoking newMyName
+  var newMyName= function (){
+    myName();
+  }
 
+//Now alert the result of invoking newMyName
+alert(newMyName);
 
 
 //////////////////PROBLEM 7////////////////////
@@ -69,11 +95,19 @@ var name = 'Tyler';
 
 
 //Create a function called outerFn which returns an anonymous function which returns your name.
+//Code Here
 
-  //Code Here
+function outerFn(){
+  return function(){
+    return "John";
+  }
+}
 
 //Now save the result of invoking outerFn into a variable called innerFn.
 
   //Code Here
+var innerFn=outerFn();
+
 
 //Now invoke innerFn.
+innerFn();
